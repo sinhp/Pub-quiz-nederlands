@@ -21,7 +21,6 @@
 \institute{Dizzy}
 % \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
 
-\newcommand*{\grabto}[2]{\IfFileExists{#2}{}{\immediate\write18{curl \detokenize{#1 -o #2}}}}
 
 \begin{document}
 
@@ -68,7 +67,6 @@ in de tekst.  \hfill \\
  \vspace{10pt}
  \begin{figure}
      \centering
-     \grabto{https://commons.wikimedia.org/wiki/File:WOF_Boudewijn_de_Groot.jpg}{WOF_Boudewijn_de_Groot.jpg}
      \includegraphics{WOF_Boudewijn_de_Groot.jpg}
      \caption{zijn/haar handafdrukken in de Walk of Fame te Rotterdam}
      \label{fig:my_label}
