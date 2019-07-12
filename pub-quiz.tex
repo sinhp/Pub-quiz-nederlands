@@ -5,7 +5,7 @@
 
 \usepackage{booktabs}
 \usepackage[scale=2]{ccicons}
-\usepackage{graphicx}
+
 
 \usepackage{pgfplots}
 \usepgfplotslibrary{dateplot}
@@ -21,6 +21,26 @@
 \institute{Dizzy}
 % \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{media9}
+
+\setbeamertemplate{button}{\tikz
+  \node[
+  inner xsep=5pt,
+  draw=structure!80,
+  fill = white, 
+  fill=structure!50,
+  rounded corners=5pt]  {\color{white}\Large\insertbuttontext};}
+
+\newcounter{vnum} %% vraag nummer
+\newcounter{preframevnum}
+\usecounter{vnum}
+\newcommand{\vnummer}{\noindent\text{Vraag \arabic{vnum}}\refstepcounter{vnum}}
+\setcounter{vnum}{1}
+
 
 \begin{document}
 
@@ -33,7 +53,10 @@
 
 \section{Vragen}
 
-\begin{frame}[fragile]{Vraag 1 (\textsc{10punten})}
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small  \hfill (\textsc{10 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\pause
 \metroset{block=fill}
  \begin{alertblock}{Vraag}
  Noem het nummer en de zanger van het nummer dat het volgende bevat
@@ -42,115 +65,137 @@ in de tekst.  \hfill \\
  \vspace{10pt}
 \texttt{``Want je kunt niets zeker weten en alles gaat voorbij. Maar \ldots''} 
  \end{alertblock}
-%  Avond van Boudewijn de Groot --  
-% Nu hoef je nooit je jas meer aan te trekken
-% en te hopen dat je licht het doet.
-% Laat buiten de stormwind nu maar razen in het donker
-% want binnen is het warm en licht en goed.
-% Hand in hand naar buiten kijken waar de regen valt.
-% Ik zie het vuur van hoop en twijfel in je ogen
-% en ik ken je diepste angst.
-% Want je kunt niets zeker weten en alles gaat voorbij.
-% Maar ik geloof, ik geloof, ik geloof,
-% ik geloof, ik geloof in jou en mij.
-% En als je 's morgens opstaat ben ik bij je
-% en misschien heb ik al thee gezet.
-% En als de zon schijnt buiten gaan we lopen door de duinen
-% en als het regent gaan we terug in bed.
-% Uren langzaam wakker worden, zwevend door de tijd,
-% ik zie het licht door de gordijnen en ik weet:
-% het verleden geeft geen zekerheid.
-% Want je…
 \pause
-\vspace{10pt}
+\vspace{5pt}
  \begin{exampleblock}{Wenk}
- \vspace{10pt}
+ \vspace{5pt}
  \begin{figure}
      \centering
-     \includegraphics{WOF_Boudewijn_de_Groot.jpg}
-     \caption{zijn/haar handafdrukken in de Walk of Fame te Rotterdam}
+     \includegraphics[scale=1.8]{WOF_Boudewijn_de_Groot.jpg}
+     \caption{\textit{zijn/haar handafdrukken in de Walk of Fame te Rotterdam}}
      \label{fig:my_label}
  \end{figure}
  \end{exampleblock}
 \end{frame}
 
-
-
-\section{Titleformats}
-
-\begin{frame}{Metropolis titleformats}
-	\themename supports 4 different titleformats:
-	\begin{itemize}
-		\item Regular
-		\item \textsc{Smallcaps}
-		\item \textsc{allsmallcaps}
-		\item ALLCAPS
-	\end{itemize}
-	They can either be set at once for every title type or individually.
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{8 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\pause
+\metroset{block=fill}
+ \begin{alertblock}{Vraag}
+   Deze persoon 
+   \begin{itemize}
+       \item was volgens de Volkskrant Top 200 de invloedrijkste Nederlander van 2007, 2008, en 2009.
+       \item is lid van D66.
+       \item was eerder rector magnificus van de Erasmus Universiteit. 
+       \item is lid van de raad van bestuur van ING.
+   \end{itemize}
+ \end{alertblock}
 \end{frame}
 
-{
-    \metroset{titleformat frame=smallcaps}
-\begin{frame}{Small caps}
-	This frame uses the \texttt{smallcaps} titleformat.
 
-	\begin{alertblock}{Potential Problems}
-		Be aware, that not every font supports small caps. If for example you typeset your presentation with pdfTeX and the Computer Modern Sans Serif font, every text in smallcaps will be typeset with the Computer Modern Serif font instead.
-	\end{alertblock}
-\end{frame}
-}
-
-{
-\metroset{titleformat frame=allsmallcaps}
-\begin{frame}{All small caps}
-	This frame uses the \texttt{allsmallcaps} titleformat.
-
-	\begin{alertblock}{Potential problems}
-		As this titleformat also uses smallcaps you face the same problems as with the \texttt{smallcaps} titleformat. Additionally this format can cause some other problems. Please refer to the documentation if you consider using it.
-
-		As a rule of thumb: Just use it for plaintext-only titles.
-	\end{alertblock}
-\end{frame}
-}
-
-{
-\metroset{titleformat frame=allcaps}
-\begin{frame}{All caps}
-	This frame uses the \texttt{allcaps} titleformat.
-
-	\begin{alertblock}{Potential Problems}
-		This titleformat is not as problematic as the \texttt{allsmallcaps} format, but basically suffers from the same deficiencies. So please have a look at the documentation if you want to use it.
-	\end{alertblock}
-\end{frame}
-}
-
-\section{Elements}
-
-\begin{frame}[fragile]{Typography}
-      \begin{verbatim}The theme provides sensible defaults to
-\emph{emphasize} text, \alert{accent} parts
-or show \textbf{bold} results.\end{verbatim}
-
-  \begin{center}becomes\end{center}
-
-  The theme provides sensible defaults to \emph{emphasize} text,
-  \alert{accent} parts or show \textbf{bold} results.
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{12 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\pause
+\metroset{block=fill}
+ \begin{alertblock}{Vraag}
+   Hoe oud is Arjen Lubach?
+ \end{alertblock}
 \end{frame}
 
-\begin{frame}{Font feature test}
-  \begin{itemize}
-    \item Regular
-    \item \textit{Italic}
-    \item \textsc{SmallCaps}
-    \item \textbf{Bold}
-    \item \textbf{\textit{Bold Italic}}
-    \item \textbf{\textsc{Bold SmallCaps}}
-    \item \texttt{Monospace}
-    \item \texttt{\textit{Monospace Italic}}
-    \item \texttt{\textbf{Monospace Bold}}
-    \item \texttt{\textbf{\textit{Monospace Bold Italic}}}
-  \end{itemize}
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{16 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\pause
+\href{https://youtu.be/slSXVoq75Yg?t=1423}{\beamergotobutton{Finale van WK '74}}
+\pause
+\metroset{block=fill}
+ \begin{alertblock}{Vraag}
+   welke van deze spelers in de finale van het Wereldkampioenschap voetbal 1974 in West-Duitsland niet tegen Duitsland speelde?  
+   \begin{enumerate}
+       \item \textsc{Johan Cruijff}
+       \item \textsc{Ruud Krol}
+       \item \textsc{Piet Schrijvers} 
+       \item \textsc{René van de Kerkhof}
+       \item \textsc{Arie Haan}
+   \end{enumerate}
+ \end{alertblock}
+%  \begin{figure}[ht!]
+%  % using a YouTube video
+% \includemedia[
+%   width=0.6\linewidth,height=0.3375\linewidth,
+%   activate=pageopen,
+%   flashvars={
+%   modestbranding=1 % no YT logo in control bar
+%   &autohide=1 % controlbar autohide
+%   &showinfo=0 % no title and other info before start
+%   &rel=0 % no related videos after end
+% }
+% ]{\includegraphics[width=0.6\linewidth]{048}}{https://www.youtube.com/watch?v=slSXVoq75Yg}
+% \end{figure}
 \end{frame}
+
+
+
+
+
+\section{Aantowoorden}
+\setcounter{vnum}{1}
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\textbf{\texttt{Avond van Boudewijn de Groot}}\\
+\vspace{10pt}
+\small{\textit{ Nu hoef je nooit je jas meer aan te trekken\\
+en te hopen dat je licht het doet.\\
+Laat buiten de stormwind nu maar razen in het donker\\
+want binnen is het warm en licht en goed.\\
+Hand in hand naar buiten kijken waar de regen valt.\\
+Ik zie het vuur van hoop en twijfel in je ogen\\
+en ik ken je diepste angst.\\
+\textbf{\alert{Want je kunt niets zeker weten en alles gaat voorbij.}}\\
+Maar ik geloof, ik geloof, ik geloof,\\
+ik geloof, ik geloof in jou en mij.\\
+En als je 's morgens opstaat ben ik bij je\\
+en misschien heb ik al thee gezet.\\
+En als de zon schijnt buiten gaan we lopen door de duinen\\
+en als het regent gaan we terug in bed.\\
+Uren langzaam wakker worden, zwevend door de tijd,\\
+ik zie het licht door de gordijnen en ik weet:\\
+het verleden geeft geen zekerheid \ldots \\}}
+\end{frame}
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\textbf{\texttt{Alexander Rinnooy Kan}}\\
+\vspace{10pt}
+\texttt{https://www.volkskrant.nl/nieuws-achtergrond/\\rinnooy-kan-invloedrijkste-nederlander~b61a091d/}
+\end{frame}
+
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+Arjen Lubach werd geboren op 22 oktober 1979 in Groningen. \\ 
+\vspace{10pt}
+\begin{center}
+  Daarom is hij  \alert{\textbf{\texttt{39 jaar oud}}}.  
+\end{center}
+\end{frame}
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+De Aantwoord is Piet Schrijvers. Hij was de reserve keeper. \\ 
+\vspace{10pt}
+\end{frame}
+
+
 
 \begin{frame}{Lists}
   \begin{columns}[T,onlytextwidth]
