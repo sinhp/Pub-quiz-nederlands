@@ -20,7 +20,7 @@
 \author{Sina}
 \institute{Dizzy}
 % \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
-
+\usepackage{macro}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{parskip}
@@ -41,6 +41,7 @@
 \newcommand{\vnummer}{\noindent\text{Vraag \arabic{vnum}}\refstepcounter{vnum}}
 \setcounter{vnum}{1}
 
+\pagenumbering{gobble}
 
 \begin{document}
 
@@ -142,12 +143,69 @@ in de tekst.  \hfill \\
 \setcounter{preframevnum}{\value{vnum}}
 \begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
 \setcounter{vnum}{\value{preframevnum}}
-
+\pause
 \metroset{block=fill}
  \begin{alertblock}{Vraag}
    Hoe zeg je ``Nederlands'' in het Russich?
  \end{alertblock}
 \end{frame}
+
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{11 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\pause
+\metroset{block=fill}
+ \begin{alertblock}{Vraag}
+   Hoe zeg je ``Hoe gaat het met jou?'' in het Fries?
+ \end{alertblock}
+\end{frame}
+
+
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{13 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\pause
+\metroset{block=fill}
+ \begin{alertblock}{Vraag}
+   Van welke \texttt{Latijnse naam} was de naam \alert{Utrecht} later afgeleid?
+ \end{alertblock}
+\end{frame}
+
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\pause
+\textbf{Het Spreekwoorden spel: raad het spreekwoord!}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+      \begin{itemize}
+        \item Milk 
+      \end{itemize}
+
+    \column{0.5\textwidth}
+      \begin{itemize}
+          \item First,
+      \end{itemize}
+
+  \end{columns}
+
+
+
+
+\metroset{block=fill}
+ \begin{alertblock}{Vraag}
+   
+ \end{alertblock}
+\end{frame}
+
+
+
+%%%%%%%%
+%%%%%%%%
+\section{Einde van vraagen}
 
 
 
@@ -185,7 +243,7 @@ het verleden geeft geen zekerheid \ldots \\}}
 \setcounter{vnum}{\value{preframevnum}}
 \textbf{\texttt{Alexander Rinnooy Kan}}\\
 \vspace{10pt}
-\texttt{https://www.volkskrant.nl/nieuws-achtergrond/\\rinnooy-kan-invloedrijkste-nederlander~b61a091d/}
+\url{https://www.volkskrant.nl/nieuws-achtergrond/rinnooy-kan-invloedrijkste-nederlander~b61a091d/}
 \end{frame}
 
 
@@ -223,8 +281,34 @@ De Aantwoord is \alert{Piet Schrijvers}. Hij was de reserve keeper. \\
 \end{frame}
 
 
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{11 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\begin{center}
+  \alert{\textbf{\texttt{Hoe giet it mei dy?}}}.  
+\end{center}
+\end{frame}
 
 
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{11 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\alert{\textbf{\texttt{Traiectum}}}
+\pause
+\vspace{10pt}
+\ilum{Onder het huidige Domplein in {\color{utrechtYellow}{Utrecht}} zijn nog resten annwezig van een fort uit de Romeinse tijd. Dat fort, gelegen langs de rivier de Rijn, droeg de Latijnse naam \texttt{Traiectum}, wat `doorwaadbare plaats' (in een rivier) of `overgang' betekent. Van deze naam is later de naam Utrecht afgeleid. \textit{`Utrecht'} is een samenstelling van {\color{utrechtYellow}{\textit{uut}}} (Oudnederlands voor `uit') en {\color{utrechtYellow}{\textit{Trecht}}} (van Traiectum). }
+\pause 
+\ilum{In 1290, een dichter voegde `uut' toe aan `Trecht'.}
+
+\end{frame}
+
+
+
+
+
+
+
+%%%------------------------------------------------------------------------------------------------
 \begin{frame}{Lists}
   \begin{columns}[T,onlytextwidth]
     \column{0.33\textwidth}
@@ -248,39 +332,6 @@ De Aantwoord is \alert{Piet Schrijvers}. Hij was de reserve keeper. \\
 \end{frame}
 
 
-\begin{frame}{Animation}
-  \begin{itemize}[<+- | alert@+>]
-    \item \alert<4>{This is\only<4>{ really} important}
-    \item Now this
-    \item And now this
-  \end{itemize}
-\end{frame}
-\begin{frame}{Figures}
-  \begin{figure}
-    \newcounter{density}
-    \setcounter{density}{20}
-    \begin{tikzpicture}
-      \def\couleur{alerted text.fg}
-      \path[coordinate] (0,0)  coordinate(A)
-                  ++( 90:5cm) coordinate(B)
-                  ++(0:5cm) coordinate(C)
-                  ++(-90:5cm) coordinate(D);
-      \draw[fill=\couleur!\thedensity] (A) -- (B) -- (C) --(D) -- cycle;
-      \foreach \x in {1,...,40}{%
-          \pgfmathsetcounter{density}{\thedensity+20}
-          \setcounter{density}{\thedensity}
-          \path[coordinate] coordinate(X) at (A){};
-          \path[coordinate] (A) -- (B) coordinate[pos=.10](A)
-                              -- (C) coordinate[pos=.10](B)
-                              -- (D) coordinate[pos=.10](C)
-                              -- (X) coordinate[pos=.10](D);
-          \draw[fill=\couleur!\thedensity] (A)--(B)--(C)-- (D) -- cycle;
-      }
-    \end{tikzpicture}
-    \caption{Rotated square from
-    \href{http://www.texample.net/tikz/examples/rotated-polygons/}{texample.net}.}
-  \end{figure}
-\end{frame}
 \begin{frame}{Tables}
   \begin{table}
     \caption{Largest cities in the world (source: Wikipedia)}
@@ -332,81 +383,63 @@ De Aantwoord is \alert{Piet Schrijvers}. Hij was de reserve keeper. \\
 
   \end{columns}
 \end{frame}
-\begin{frame}{Math}
-  \begin{equation*}
-    e = \lim_{n\to \infty} \left(1 + \frac{1}{n}\right)^n
-  \end{equation*}
-\end{frame}
-\begin{frame}{Line plots}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mlineplot,
-        width=0.9\textwidth,
-        height=6cm,
-      ]
 
-        \addplot {sin(deg(x))};
-        \addplot+[samples=100] {sin(deg(2*x))};
 
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
-\begin{frame}{Bar charts}
-  \begin{figure}
-    \begin{tikzpicture}
-      \begin{axis}[
-        mbarplot,
-        xlabel={Foo},
-        ylabel={Bar},
-        width=0.9\textwidth,
-        height=6cm,
-      ]
+% \begin{frame}{Line plots}
+%   \begin{figure}
+%     \begin{tikzpicture}
+%       \begin{axis}[
+%         mlineplot,
+%         width=0.9\textwidth,
+%         height=6cm,
+%       ]
 
-      \addplot plot coordinates {(1, 20) (2, 25) (3, 22.4) (4, 12.4)};
-      \addplot plot coordinates {(1, 18) (2, 24) (3, 23.5) (4, 13.2)};
-      \addplot plot coordinates {(1, 10) (2, 19) (3, 25) (4, 15.2)};
+%         \addplot {sin(deg(x))};
+%         \addplot+[samples=100] {sin(deg(2*x))};
 
-      \legend{lorem, ipsum, dolor}
+%       \end{axis}
+%     \end{tikzpicture}
+%   \end{figure}
+% \end{frame}
+% \begin{frame}{Bar charts}
+%   \begin{figure}
+%     \begin{tikzpicture}
+%       \begin{axis}[
+%         mbarplot,
+%         xlabel={Foo},
+%         ylabel={Bar},
+%         width=0.9\textwidth,
+%         height=6cm,
+%       ]
 
-      \end{axis}
-    \end{tikzpicture}
-  \end{figure}
-\end{frame}
-\begin{frame}{Quotes}
-  \begin{quote}
-    Veni, Vidi, Vici
-  \end{quote}
-\end{frame}
+%       \addplot plot coordinates {(1, 20) (2, 25) (3, 22.4) (4, 12.4)};
+%       \addplot plot coordinates {(1, 18) (2, 24) (3, 23.5) (4, 13.2)};
+%       \addplot plot coordinates {(1, 10) (2, 19) (3, 25) (4, 15.2)};
 
-{%
-\setbeamertemplate{frame footer}{My custom footer}
-\begin{frame}[fragile]{Frame footer}
-    \themename defines a custom beamer template to add a text to the footer. It can be set via
-    \begin{verbatim}\setbeamertemplate{frame footer}{My custom footer}\end{verbatim}
-\end{frame}
-}
+%       \legend{lorem, ipsum, dolor}
 
-\begin{frame}{References}
-  Some references to showcase [allowframebreaks] \cite{knuth92,ConcreteMath,Simpson,Er01,greenwade93}
-\end{frame}
+%       \end{axis}
+%     \end{tikzpicture}
+%   \end{figure}
+% \end{frame}
+
+
 
 \section{Conclusion}
 
-\begin{frame}{Summary}
+% \begin{frame}{Summary}
 
-  Get the source of this theme and the demo presentation from
+%   Get the source of this theme and the demo presentation from
 
-  \begin{center}\url{github.com/matze/mtheme}\end{center}
+%   \begin{center}\url{github.com/matze/mtheme}\end{center}
 
-  The theme \emph{itself} is licensed under a
-  \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
-  Attribution-ShareAlike 4.0 International License}.
+%   The theme \emph{itself} is licensed under a
+%   \href{http://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons
+%   Attribution-ShareAlike 4.0 International License}.
 
-  \begin{center}\ccbysa\end{center}
+%   \begin{center}\ccbysa\end{center}
 
-\end{frame}
+% \end{frame}
 
 {\setbeamercolor{palette primary}{fg=black, bg=yellow}
 \begin{frame}[standout]
