@@ -35,6 +35,11 @@
   fill=structure!50,
   rounded corners=5pt]  {\color{white}\Large\insertbuttontext};}
 
+\setbeamertemplate{caption}{%
+\begin{beamercolorbox}[wd=.3\paperwidth, sep=.5ex]{block body}\color{oranje}{\insertcaption}%
+\end{beamercolorbox}%
+}
+
 \newcounter{vnum} %% vraag nummer
 \newcounter{preframevnum}
 \usecounter{vnum}
@@ -175,32 +180,53 @@ in de tekst.  \hfill \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten voor elk})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \textbf{\texttt{Het Spreekwoorden spel: raad het spreekwoord!}}\\
-\vspace{20pt}
-\texttt{Bijvoorbeelden:}
-  \begin{columns}[T,onlytextwidth]
+\vspace{10pt}
+\setcounter{vnum}{\value{preframevnum}}
+\texttt{Bijv.}
+
+\begin{columns}[T,onlytextwidth]
     \column{0.5\textwidth}
-      \begin{itemize}
-        \item Milk 
-      \end{itemize}
-
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.1, angle=90]{groen-en-geel.pdf}
+            \caption{Je groen en geel ergeren.}
+            \label{}
+        \end{figure}
+        
     \column{0.5\textwidth}
-      \begin{itemize}
-          \item First,
-      \end{itemize}
+       \begin{figure}
+            \centering
+            \includegraphics[scale=0.1, angle=90]{duim-zuigen.pdf}
+            \caption{Iets uit de  duim zuigen.}
+            \label{}
+        \end{figure}
+ \end{columns}
+\pause 
+\hrule
+\hrule
+\vspace{10pt}
+\begin{columns}[T,onlytextwidth]
+    \column{0.5\textwidth}
+        \begin{figure}
+            \centering
+            \includegraphics[scale=0.1, angle=90]{kleine-potjes.pdf}
+            \caption{\ \ \ \ \ \ \ ???}
+            \label{}
+        \end{figure}
+        
+    \column{0.5\textwidth}
+       \begin{figure}
+            \centering
+            \includegraphics[scale=0.1, angle=90]{voortouw.pdf}
+            \caption{\ \ \ \ \ \ \ ???}
+            \label{}
+        \end{figure}
+ \end{columns}
 
-  \end{columns}
-
-
-
-
-\metroset{block=fill}
- \begin{alertblock}{Vraag}
-   
- \end{alertblock}
 \end{frame}
 
 
