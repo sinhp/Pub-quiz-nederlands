@@ -805,7 +805,7 @@
 \newcommand{\base}{\ensuremath{\mathbb{B}\mathbf{ase}}} %% base of a Grothendieck topos
 \newcommand{\bag}{\ensuremath{\mathscr{B}ag}} %% base of a Grothendieck topos
 \newcommand{\Barcons}{\ensuremath{\mathbf{Bar}}} %% base of a Grothendieck topos
-\newcommand{\num}[1]{\mathbf{#1}} %%% bold numbers
+%\newcommand{\num}[1]{\mathbf{#1}} %%% bold numbers
 \newcommand{\catg}[1]{\mathbf{#1}} % for finite categories
 \newcommand{\ccatg}[1]{\mathbf{#1}} % for basic cats
 \newcommand{\yon}{\mbox{\textit{y}}} %% Yoneda embedding
@@ -1126,6 +1126,13 @@ right=1mm,pad at break=2mm,
 \definecolor{deStijlBlue}{HTML}{1F7FC9}
 \definecolor{deStijlRed}{HTML}{F60201}
 \definecolor{deStijlWhite}{HTML}{FEFFFA}
+
+%https://tex.stackexchange.com/questions/304155/%C2%B1-symbol-in-text
+\usepackage[
+  separate-uncertainty = true,
+  multi-part-units = repeat
+]{siunitx}
+
 \definecolor{oranje}{HTML}{FFA500}
 \definecolor{nlblue}{HTML}{21468B}
 \definecolor{utrechtBlue}{HTML}{5bbad5}
