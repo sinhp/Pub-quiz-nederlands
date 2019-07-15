@@ -47,7 +47,8 @@
 \newcommand{\vnummer}{\noindent\text{Vraag \arabic{vnum}}\refstepcounter{vnum}}
 \setcounter{vnum}{1}
 
-\pagenumbering{gobble}
+%\pagenumbering{gobble}
+
 
 \begin{document}
 
@@ -62,8 +63,8 @@
 
 \begin{frame}[fragile]{Regels}
     \begin{itemize}
-        \item Er zijn ??? vragen. Elke vraag heeft een bepaald aantal punten en moet binnen een bepaald tijdslimiet worden beantwoord.
-        \item De punten en tijdslimiet van elke vraag worden aangegeven in de rechterbovenhoek. 
+        \item Er zijn 14 vragen. Elke vraag heeft een bepaald aantal punten en moet binnen een bepaald maximum tijdslimiet worden beantwoord.
+        \item De punten en maximum tijdslimiet van elke vraag worden aangegeven in de rechterbovenhoek. 
         \item Aan het einde tellen we de punten en het team dat meer punten verzamelt wint het spel.
         \item Je kunt geen internet gebruiken.
         \item Je kunt geen encyclopedie gebruiken.
@@ -75,21 +76,33 @@
 
 
 \begin{frame}[standout]
- \begin{center}
+ \begin{figure}
+     \centering
 \includemedia[
-        addresource=countdown.mp3,
+        addresource=countdown-short-6.mp3,
+        activate=pageopen,
         transparent,
         flashvars={
-            source=countdown.mp3
+            source=countdown-short-6.mp3
             &autoPlay=true
+            &hideBar=true %enable this to make player invisible
         },
-]{\includegraphics[scale=0.25]{halloween.jpg}}{APlayer.swf}
-\end{center}
+]{\includegraphics[scale=0.35]{countdown-10.png}}{APlayer.swf}
+
+%https://tex.stackexchange.com/questions/183579/playing-portions-of-mp3-in-pdf?rq=1
+% \mediabutton[
+%   mediacommand=mysound:play [(10.0)],
+%   mediacommand=mysound:pause [(33.0)]
+% ]{}
+
+\end{figure}
 \end{frame}
 
 
+
+
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small  \hfill (\textsc{10 punten})}
+\begin{frame}[fragile]{\vnummer \small  \hfill (\textsc{10 punten}/ \textsc{1 minuut})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \metroset{block=fill}
@@ -114,7 +127,7 @@ in de tekst.  \hfill \\
 \end{frame}
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{8 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten/ 1 minuut})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \metroset{block=fill}
@@ -131,7 +144,7 @@ in de tekst.  \hfill \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{12 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten/ 1 minuut})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \metroset{block=fill}
@@ -142,7 +155,7 @@ in de tekst.  \hfill \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{16 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten/ 1 minuut})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \href{https://embed.vpro.nl/popout/?id=VPWON_1209805&profile=vpro&paused=0&volume=1&muted=0&streaming=0&currenttime=1416}{\beamergotobutton{Finale van WK '74 \scriptsize{\textsc{\color{utrechtBlue}{@vpro.nl}}}}}
@@ -186,7 +199,7 @@ in de tekst.  \hfill \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{11 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten/30 seconden})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \metroset{block=fill}
@@ -197,7 +210,7 @@ in de tekst.  \hfill \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten/ 30 seconden})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \metroset{block=fill}
@@ -228,7 +241,6 @@ in de tekst.  \hfill \\
       \end{block}
 
   \end{columns} 
- 
 \end{frame}
 
 
@@ -236,7 +248,7 @@ in de tekst.  \hfill \\
 \section{Pauze Vraag}
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{11 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{15 punten/ 1 minuut})}
 \setcounter{vnum}{\value{preframevnum}}
 \metroset{block=fill}
  \begin{alertblock}{Vraag}
@@ -247,7 +259,7 @@ in de tekst.  \hfill \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{13 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten/ 1 minuut})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \metroset{block=fill}
@@ -258,7 +270,7 @@ in de tekst.  \hfill \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten voor elk})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten voor elk/ 1 minuut \& 30 seconden in totaal})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \href{https://scalaleukerleren.nl/taal/educatieve-spelletjes-over-taal/het-spreekwoordenspel/}{\textbf{\texttt{Het Spreekwoorden spel: raad het spreekwoord!}}}\\
@@ -310,7 +322,7 @@ in de tekst.  \hfill \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten voor elk})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten voor elk/ 3 minuten in totaal})}
 \setcounter{vnum}{\value{preframevnum}}
 \pause
 \begin{columns}[T,onlytextwidth]
@@ -355,6 +367,43 @@ in de tekst.  \hfill \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill \textsc{(15 punten/ 1 minuut)} }
+\setcounter{vnum}{\value{preframevnum}}
+\pause
+\begin{figure}
+    \centering
+    \includegraphics[scale=1.2]{fat-cat-bosch.jpg}
+    \caption{\ \ \ \ \ Credit: \href{https://fatcatart.com/2016/03/kitty-fame/?lang=en}{fatcatart}}
+    \label{}
+\end{figure}
+\pause
+\metroset{block=fill}
+ \begin{alertblock}{Vraag}
+   Dit is een licht bewerkt schilderij van Hieronymus Bosch. Wat zit er in plaats van de dikke kat in de originele foto?
+ \end{alertblock}
+\end{frame}
+
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small  \hfill \textsc{(15 punten/ 1 minuut)}}
+\setcounter{vnum}{\value{preframevnum}}
+\pause
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.26]{escher-ontwikkeling-ii.jpg}
+    \caption{\ \ \ \ \ Credit: \href{https://www.mcescher.nl/galerij/zwitserland-en-belgi/ontwikkeling-iii/}{mcescher.nl}}
+    \label{}
+\end{figure}
+\pause
+\metroset{block=fill}
+ \begin{alertblock}{Vraag}
+   Wat is de naam van dit schilderij van Escher?
+ \end{alertblock}
+\end{frame}
+
+
+
+\setcounter{preframevnum}{\value{vnum}}
 \begin{frame}[fragile]{\vnummer \small }
 \setcounter{vnum}{\value{preframevnum}}
 \pause
@@ -363,9 +412,9 @@ in de tekst.  \hfill \\
    Wat is het totale aantal punten van de andere team(s) voor deze vraag. Voor elke correcte voorspelling (binnen de marge $\pm 10$) krijgt u 7 extra punten.\\
    \pause
    \vspace{10pt}
-   \texttt{bijv. Stel dat er twee teams zijn: team Gandalf en team Saruman. Als team Saruman 60 punten verzamelt voorafgaand aan deze vraag, en team Gandalf schat dat Saruman 50 punten verzamelde voorafgaand aan deze vraag, dan verzamelt Gandalf extra 7 punten.} \\
+   \texttt{bijv. Stel dat er twee teams zijn: team Gandalf en team Saruman. Als team Saruman 60 punten verzamelt voorafgaand aan deze vraag, en team Gandalf schat dat Saruman 50 punten verzamelde voorafgaand aan deze vraag, dan verzamelt Gandalf \underline{extra 10 punten}.} \\
    \vspace{10pt}
-   \emph{Vergeet niet dat het maximaal mogelijke aantal punten is ??}
+   \emph{Vergeet niet dat het maximaal mogelijke aantal punten is \underline{185}.}
  \end{alertblock}
 \end{frame}
 
@@ -381,7 +430,7 @@ in de tekst.  \hfill \\
 
 %%% -------------
 %%% -------------
-\section{Aantowoorden}
+\section{Antwoorden}
 \setcounter{vnum}{1}
 
 \setcounter{preframevnum}{\value{vnum}}
@@ -409,7 +458,7 @@ het verleden geeft geen zekerheid \ldots \\}}
 \end{frame}
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{8 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
 \setcounter{vnum}{\value{preframevnum}}
 \textbf{\texttt{Alexander Rinnooy Kan}}\\
 \vspace{10pt}
@@ -418,7 +467,7 @@ het verleden geeft geen zekerheid \ldots \\}}
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{12 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
 \setcounter{vnum}{\value{preframevnum}}
 Arjen Lubach werd geboren op 22 oktober 1979 in Groningen. \\ 
 \vspace{10pt}
@@ -428,7 +477,7 @@ Arjen Lubach werd geboren op 22 oktober 1979 in Groningen. \\
 \end{frame}
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{16 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
 \setcounter{vnum}{\value{preframevnum}}
 Onder leiding van Rinus Michels werd de finale gehaald, waarin het Nederlandse team van West-Duitsland verloor met 2-1, ondanks een geweldige prestatie.\\
 \vspace{5pt}
@@ -452,7 +501,7 @@ De Aantwoord is \alert{Piet Schrijvers}. Hij was de reserve keeper. \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{11 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
 \setcounter{vnum}{\value{preframevnum}}
 \begin{center}
   \alert{\textbf{\texttt{Hoe giet it mei dy?}}}  
@@ -478,7 +527,7 @@ De Aantwoord is \alert{Piet Schrijvers}. Hij was de reserve keeper. \\
 
 
 \setcounter{preframevnum}{\value{vnum}}
-\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{11 punten})}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{10 punten})}
 \setcounter{vnum}{\value{preframevnum}}
 \alert{\textbf{\texttt{Traiectum}}}
 \pause
@@ -500,7 +549,7 @@ De Aantwoord is \alert{Piet Schrijvers}. Hij was de reserve keeper. \\
 \vspace{5pt}
 {\color{utrechtBlue}{\texttt{DE BETEKENIS:}}} Kinderen  luisteren ook mee, daarom moet je uitkijken met wat je zegt als er kinderen bij zijn.\\
 \vspace{5pt}
-{\color{utrechtBlue}{\texttt{\scriptsize aanvullende uitleg:}}} \scriptsize{Met kleine potjes zijn hier kinderen bedoeld. Maar echte potjes (bloempotjes) hebben net als kinderen oren. Het wordt oren heeft in dit spreekwoord dus twee betekenisses: gehoororgan en handvatje.} }
+{\color{utrechtBlue}{\texttt{\scriptsize aanvullende uitleg:}}} \scriptsize{Met kleine potjes zijn hier kinderen bedoeld. Maar echte potjes (bloempotjes) hebben net als kinderen oren. Het woord ``oren'' heeft in dit spreekwoord dus twee betekenissen: gehoororgaan en handvatje.} }
 \pause 
 \column{0.45\textwidth}
 \ilum{\alert{B: Het \underline{voortouw} nemen.}\\ 
@@ -510,7 +559,6 @@ De Aantwoord is \alert{Piet Schrijvers}. Hij was de reserve keeper. \\
 {\color{utrechtBlue}{\texttt{\scriptsize aanvullende uitleg:}}} \scriptsize{Een voortouw is enn touw dat aan de voorkant van een schip hangt. Het wordt gebruikt om te schip te verslepen of ann de kade of aan een ander schip vast te leggen. Als je het voortouw neemt, onderneem je dus actie.} }
 \end{columns}
 \end{frame}
-
 
 \begin{frame}{Bloempotje}
     \begin{figure}
@@ -522,85 +570,90 @@ De Aantwoord is \alert{Piet Schrijvers}. Hij was de reserve keeper. \\
 \end{frame}
 
 
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{elk 10 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+\begin{columns}[T,onlytextwidth]
+\column{0.45\textwidth}
+\ilum{\alert{A: Je \underline{ei} niet kwijt \underline{kunnen}.}\\ 
+\vspace{5pt}
+{\color{utrechtBlue}{\texttt{DE BETEKENIS:}}} Niet kunnen doen of zeggen wat je wilt.\\
+%\vspace{5pt}
+%{\color{utrechtBlue}{\texttt{\scriptsize aanvullende uitleg:}}} \scriptsize{Ei heeft hier de betekenis: iets moet uitgebroed worden. In fit geval gaat het om een idee dat uitgebroed moet worden. Krijg je niet de kans om je idee\"en naar voren te brengen, dan voel je je messtal ongelukkig.} 
+}
+\vspace{12pt}
+\pause
+\ilum{\alert{C: \underline{Gebakken} \underline{lucht}.}\\ 
+\vspace{5pt}
+{\color{utrechtBlue}{\texttt{DE BETEKENIS:}}} Mooie praatjes; zonder betekenis.\\
+}
+\pause 
+
+\column{0.45\textwidth}
+\ilum{\alert{B: \underline{Lont} ruiken.}\\ 
+\vspace{10pt}
+{\color{utrechtBlue}{\texttt{DE BETEKENIS:}}} Merken dat er iets aan de hand is; merken dat er gevaar is.\\ 
+%\vspace{15pt}
+%{\color{utrechtBlue}{\texttt{\scriptsize aanvullende uitleg:}}} \scriptsize{Een voortouw is enn touw dat aan de voorkant van een schip hangt. Het wordt gebruikt om te schip te verslepen of ann de kade of aan een ander schip vast te leggen. Als je het voortouw neemt, onderneem je dus actie.} 
+}
+\pause
+\vspace{10pt}
+\ilum{\alert{D: In de \underline{knoop} \underline{zitten}.}\\ 
+\vspace{5pt}
+{\color{utrechtBlue}{\texttt{DE BETEKENIS:}}} In de war zijn; het niet meer weten.\\
+}
+\end{columns}
+\end{frame}
+
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{15 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+    \begin{center}
+        \alert{\texttt{The Haywain Triptych}}
+    \end{center}
+    \vspace{5pt}
+    \begin{figure}
+        \centering
+        \includegraphics[scale=0.08]{bosch-haywain.jpg}
+        \caption{Credit: \href{http://thegolfclub.info/related/haywain-bosch.html}{HAYWAIN BOSCH}}
+        \label{}
+    \end{figure}
+\end{frame}
+
+
+
+\setcounter{preframevnum}{\value{vnum}}
+\begin{frame}[fragile]{\vnummer \small \hfill (\textsc{15 punten})}
+\setcounter{vnum}{\value{preframevnum}}
+    \begin{center}
+        \alert{\texttt{Ontwikkeling II}},\\
+\scriptsize{1939 Houtsnede in bruin, grijs-groen en zwart, gedrukt uit 3 blokken. 455mm x 455mm}
+    \end{center}
+\end{frame}
+
 
 
 
 
 %%%------------------------------------------------------------------------------------------------
-\begin{frame}{Lists}
-  \begin{columns}[T,onlytextwidth]
-    \column{0.33\textwidth}
-      Items
-      \begin{itemize}
-        \item Milk \item Eggs \item Potatos
-      \end{itemize}
 
-    \column{0.33\textwidth}
-      Enumerations
-      \begin{enumerate}
-        \item First, \item Second and \item Last.
-      \end{enumerate}
+% \begin{frame}{Tables}
+%   \begin{table}
+%     \caption{Largest cities in the world (source: Wikipedia)}
+%     \begin{tabular}{lr}
+%       \toprule
+%       City & Population\\
+%       \midrule
+%       Mexico City & 20,116,842\\
+%       Shanghai & 19,210,000\\
+%       Peking & 15,796,450\\
+%       Istanbul & 14,160,467\\
+%       \bottomrule
+%     \end{tabular}
+%   \end{table}
+% \end{frame}
 
-    \column{0.33\textwidth}
-      Descriptions
-      \begin{description}
-        \item[PowerPoint] Meeh. \item[Beamer] Yeeeha.
-      \end{description}
-  \end{columns}
-\end{frame}
-
-
-\begin{frame}{Tables}
-  \begin{table}
-    \caption{Largest cities in the world (source: Wikipedia)}
-    \begin{tabular}{lr}
-      \toprule
-      City & Population\\
-      \midrule
-      Mexico City & 20,116,842\\
-      Shanghai & 19,210,000\\
-      Peking & 15,796,450\\
-      Istanbul & 14,160,467\\
-      \bottomrule
-    \end{tabular}
-  \end{table}
-\end{frame}
-\begin{frame}{Blocks}
-  Three different block environments are pre-defined and may be styled with an
-  optional background color.
-
-  \begin{columns}[T,onlytextwidth]
-    \column{0.5\textwidth}
-      \begin{block}{Default}
-        Block content.
-      \end{block}
-
-      \begin{alertblock}{Alert}
-        Block content.
-      \end{alertblock}
-
-      \begin{exampleblock}{Example}
-        Block content.
-      \end{exampleblock}
-
-    \column{0.5\textwidth}
-
-      \metroset{block=fill}
-
-      \begin{block}{Default}
-        Block content.
-      \end{block}
-
-      \begin{alertblock}{Alert}
-        Block content.
-      \end{alertblock}
-
-      \begin{exampleblock}{Example}
-        Block content.
-      \end{exampleblock}
-
-  \end{columns}
-\end{frame}
 
 
 % \begin{frame}{Line plots}
