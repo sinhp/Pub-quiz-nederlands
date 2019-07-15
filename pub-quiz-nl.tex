@@ -26,6 +26,7 @@
 \usepackage{parskip}
 \usepackage{graphicx}
 \usepackage{media9}
+\usepackage{microtype}
 
 \setbeamertemplate{button}{\tikz
   \node[
@@ -72,15 +73,18 @@
 
 \section{Vragen: eerste ronde}
 
-\begin{frame}{}
-    \includemedia[
-        addresource=Phil Collins - You'll Be In My Heart with Lyrics.mp3,
+
+\begin{frame}[standout]
+ \begin{center}
+\includemedia[
+        addresource=countdown.mp3,
         transparent,
         flashvars={
-            source= Phil Collins - You'll Be In My Heart with Lyrics.mp3
+            source=countdown.mp3
             &autoPlay=true
         },
-        ]{\includegraphics[height=3ex]{sound-937654_960_720.png}}{APlayer.swf}
+]{\includegraphics[scale=0.25]{halloween.jpg}}{APlayer.swf}
+\end{center}
 \end{frame}
 
 
